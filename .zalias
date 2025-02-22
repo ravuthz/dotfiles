@@ -1,0 +1,91 @@
+alias cls=clear
+alias cli="open -a Terminal.app"
+
+alias d=docker
+alias dlogs=docker logs
+alias dstats=docker stats
+alias dbuild=docker buildx build
+
+alias c=docker compose
+alias clogs=docker compose logs
+alias cstats=docker compose stats
+alias cbuild=docker compose up --build --force-recreate
+
+alias dps="docker ps --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'"
+
+alias cps="docker compose ps --format 'table {{.ID}}\t{{.Name}}\t{{.Image}}\t{{.State}}\t{{.Ports}}' | column -t -s $'\t'"
+
+alias ss="source ~/.zalias && source ~/.zprofile && source ~/.zshrc && source ~/.bashrc"
+
+
+alias ezbash="code ~/.zshrc"
+alias ezalias="code ~/.zalias"
+alias ezprofile="code ~/.zprofile"
+
+alias zalias="alias | awk -F'[=]' '{ printf(\"| %-20s | %-50s |\n\", \$1, \$2) }' | sed 's/alias //'"
+alias za=zalias
+alias zz=zalias
+
+
+alias pn="pnpm"
+
+alias pa="php artisan"
+alias pas="php artisan serve"
+alias pam="php artisan migrate"
+
+alias shconf="~/.ssh/config"
+alias sshl="cat ~/.ssh/config | grep 'Host'"
+alias sshh="cat ~/.ssh/config | grep 'Host '"
+
+alias gghc="ggh --config"
+alias gghh="ggh --history"
+
+alias vim=nvim
+
+
+# | l                    | 'ls -lah'
+# | la                   | 'ls -lAh'
+# | ll                   | 'ls -lh'
+# | ls                   | 'ls -G'
+# | lsa                  | 'ls -lah'
+
+# alias | awk -F '=' '{ printf("| %-20s | %s\n", $1, $2) }'
+alias ls="eza -G --icons=always --color=always --git" # ls -G
+alias ll="eza -lh --icons=always --color=always --git" # ls -lh
+alias la="eza -lAh --icons=always --color=always --git" # ls -lAh
+
+alias lc="eza -G --icons=always --color=always --git" # ls -lh
+alias llc="eza -lh --icons=always --color=always --git" # ls -lh
+alias lac="eza -lAh --icons=always --color=always --git" # ls -lAh
+
+alias lll='ls -l | less'
+# List order by size ascending
+alias lss="ls -laShr"
+
+alias gbra="git branch"
+alias gsta="git status"
+alias glog="git log"
+alias gglog="git log --graph --pretty=format:'%C(blue)%ad %C(yellow)%h %C(green)%an %C(white)%d %C(red)%s' --date=format:'%Y/%m/%d %H:%M'"
+
+alias xcode="open -a Xcode"
+alias storm="open -na "PhpStorm.app" --args "$@""
+
+alias ip-local="ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print \$2}'"
+alias ip-public="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip-all="echo 'local-ip:' && ip-local && echo '\npublic-ip:' && ip-public"
+
+alias phps="php -S localhost:9000"
+alias pas="php artisan serve"
+alias pas0="php artisan serve --host=0.0.0.0 --port=6020"
+alias pas1="php artisan serve --host=\$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print \$2}') --port=6020"
+
+alias mysql=/usr/local/mysql/bin/mysql
+
+alias tm1="curl -fsSL 'https://raw.githubusercontent.com/ravuthz/starship/refs/heads/master/presets/tokyo-night.toml' -o ~/.config/starship.toml"
+alias tm2="curl -fsSL 'https://raw.githubusercontent.com/ravuthz/starship/refs/heads/master/presets/pastel-powerline.toml' -o ~/.config/starship.toml"
+alias tm3="curl -fsSL 'https://raw.githubusercontent.com/ravuthz/starship/refs/heads/master/presets/gruvbox-rainbow.toml' -o ~/.config/starship.toml"
+
+
+mail() {
+    /opt/homebrew/opt/mailhog/bin/MailHog -api-bind-addr 127.0.0.1:8025 -smtp-bind-addr 127.0.0.1:1025 -ui-bind-addr 127.0.0.1:8025
+}
