@@ -1,0 +1,174 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": [
+      "source.fixAll"
+      // "source.fixAll.eslint"
+    ],
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": [
+      "source.formatModified",
+      "source.fixAll.eslint"
+    ],
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "eslint.validate": ["typescript"],
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.fontFamily": "Operator Mono, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "workbench.tree.indent": 10,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Palenight Operator",
+  "workbench.editor.enablePreview": false,
+
+  "codetogether.userName": "Ravuthz",
+  "editor.codeActionsOnSave": ["source.fixAll"],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[yml]": {
+    "editor.codeActionsOnSave": []
+  },
+  "php.executablePath": "/opt/homebrew/opt/php@8.3/bin/php",
+  "git.ignoreRebaseWarning": true,
+  "remote.SSH.defaultExtensions": ["gitpod.gitpod-remote-ssh"],
+  "remote.SSH.remotePlatform": {
+    "sandbox.el2grw.csb": "linux",
+    "branch.tzstk7.ravuthz.react-dnd-demo.master.csb": "linux"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "explorer.confirmDelete": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "terminal.integrated.env.osx": {},
+  "editor.minimap.enabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.nue": "html",
+    "*.blade.php": "blade"
+  },
+  "bladeFormatter.format.enabled": true,
+
+  "security.promptForLocalFileProtocolHandling": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "window.zoomLevel": 1,
+  "bladeFormatter.format.indentInnerHtml": true,
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
+  "terminal.integrated.enableVisualBell": true,
+  "react-native-tools.showUserTips": false,
+  "better-phpunit.phpunitBinary": "php artisan test",
+  "playwright.reuseBrowser": false,
+  "phpunit.php": "/opt/homebrew/bin/php",
+  "phpunit.phpunit": "vendor/bin/phpunit",
+  "phpunit.args": ["-c", "phpunit.xml"],
+  "phpunit.paths": {
+    // "${workspaceFolder}": "${pwd}"
+    "${workspaceFolder}": "."
+    // ${pwd} (current directory) is mounted to /app
+    // "${workspaceFolder}": "/app"
+    // ${workspaceFolder} is mapped to /app
+  },
+  "codesandbox.currentWorkspace": "7280cb79-6115-4b07-b8db-cb3fbe985725",
+  "markdown-preview-enhanced.enablePreviewZenMode": false,
+  "docker.contexts.showInStatusBar": true,
+  "vscode_custom_css.imports": ["file:///Users/ravuthz/MyCode/custom.css"],
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "/opt/homebrew/Caskroom/warp/0.2024.06.25.08.02.stable_01/Warp.app",
+  "editor.largeFileOptimizations": false,
+
+  "custom-ui-style.stylesheet": {
+    ".notification-toast": "box-shadow: none !important",
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    ".quick-input-widget": "top: 20vh !important",
+    ".quick-input-list .scrollbar": "display: none",
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
+    ".quick-input-titlebar": "background: #100B15 !important",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+    ".monaco-scrollable-element > .shadow.top": "display: none",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".sidebar": "border: none !important",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".monaco-list-row.focused": "outline: none !important",
+    ".monaco-editor .scroll-decoration": "display: none",
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
+    ".title .monaco-icon-label:after": "margin-right: 0",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
+    ".title .monaco-icon-label.file-icon": "margin: 0 60px",
+    ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #DA70D6 100%)"
+  },
+  "autoclosetabs.tabAgeForAutomaticClosing": 1,
+  "autoclosetabs.numberOfTabsInGroup": 0,
+  "ShortcutMenuBar.indentLines": true,
+  "ShortcutMenuBar.saveAll": true,
+  "ShortcutMenuBar.toggleWordWrap": true,
+  "playwright.showTrace": false,
+  "ortoniPlaywrightTestRunner.environments": {},
+  "github.copilot.enable": {
+    "*": false
+  },
+  "mktypesound.volume": 3,
+  "mktypesound.sound": 9,
+  "gitlens.graph.minimap.enabled": false,
+  "database-client.autoSync": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "172.30.36.3",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "group": "cis",
+      "username": "mlmupc",
+      "database": "cis_production",
+      "name": "cis_production",
+      "password": "luma.cis.db.soccer.friday.2255"
+    }
+  ],
+  "containers.contexts.showInStatusBar": true,
+  "docker.extension.enableComposeLanguageServer": false,
+  "ollama-chat.serverUrl": "http://206.189.36.53:11434",
+  "ollama-chat.defaultModel": "qwen2.5-coder:7b",
+  "yaml.schemas": {
+    "/Users/ravuthz/.vscode/extensions/continue.continue-1.0.19-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+  "biome.suggestInstallingGlobally": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "avprobe.ffprobePath": "/usr/bin/ffprobe",
+  "avprobe.ffmpegPath": "/usr/bin/ffmpeg",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.wav": "xueshi.io.avprobe"
+  }
+}

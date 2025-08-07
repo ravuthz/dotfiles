@@ -18,4 +18,8 @@ make -C ~/dotfiles backup
 make -C ~/dotfiles restore
 
 
+
+https://wezterm.org/colorschemes/a/index.html#andromeda
+code ~/.config/wezterm/wezterm.lua
+
 ```

@@ -69,6 +69,7 @@ alias gglog="git log --graph --pretty=format:'%C(blue)%ad %C(yellow)%h %C(green)
 
 alias xcode="open -a Xcode"
 alias storm="open -na "PhpStorm.app" --args "$@""
+alias charm="open -na "PyCharm.app" --args "$@""
 
 alias ip-local="ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print \$2}'"
 alias ip-public="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -85,7 +86,16 @@ alias tm1="curl -fsSL 'https://raw.githubusercontent.com/ravuthz/starship/refs/h
 alias tm2="curl -fsSL 'https://raw.githubusercontent.com/ravuthz/starship/refs/heads/master/presets/pastel-powerline.toml' -o ~/.config/starship.toml"
 alias tm3="curl -fsSL 'https://raw.githubusercontent.com/ravuthz/starship/refs/heads/master/presets/gruvbox-rainbow.toml' -o ~/.config/starship.toml"
 
+alias pv="/Users/ravuthz/Projects/@oooo/tools/pyvideotrans/venv/bin/python sp.py --lang=en"
 
 mail() {
     /opt/homebrew/opt/mailhog/bin/MailHog -api-bind-addr 127.0.0.1:8025 -smtp-bind-addr 127.0.0.1:1025 -ui-bind-addr 127.0.0.1:8025
+}
+
+permit-api() {
+    ssh scanner-server "cd apps/permit-api && git pull && docker compose up --build -d"
+}
+
+scanner-api() {
+    ssh scanner-server "cd apps/scanner-api && git pull && docker compose up --build -d"
 }

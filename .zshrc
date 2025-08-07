@@ -1,7 +1,3 @@
-alias ls="eza -G --icons=always --color=always --git" # ls -G
-alias ll="eza -lh --icons=always --color=always --git" # ls -lh
-alias la="eza -lAh --icons=always --color=always --git" # ls -lAh
-
 # Fig pre block. Keep at the top of this file.
 # [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
@@ -112,27 +108,62 @@ source $ZSH/oh-my-zsh.sh
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # pnpm
-export PNPM_HOME="/Users/ravuthz/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # Fig post block. Keep at the bottom of this file.
 # [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-export PATH="$PATH:/Users/ravuthz/bin"
-export PATH="$PATH:/Users/ravuthz/.local/bin"
-export PATH="$PATH:/Users/ravuthz/.composer/vendor/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-# export ANDROID_HOME="$HOME/Library/Android/sdk"
+
 
 export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+
+# PostgreSQL 15
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
+
+
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
 # export PATH="$HOME/Applications/flutter/bin:$PATH"
 # export PATH="$ANDROID_HOME/tools:$PATH"
 # export PATH="$ANDROID_HOME/platform-tools:$PATH"
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$JAVA_HOME/bin:$PATH
+
+export ANDROID_HOME=$HOME/Android
+export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/build-tools/36.0.0:$PATH
+# export PATH=/opt/homebrew/Caskroom/android-platform-tools/36.0.0/platform-tools:$PATH
+
+# ln -s /opt/homebrew/Caskroom/android-platform-tools/36.0.0/platform-tools $ANDROID_HOME/platform-tools
+# sdkmanager "build-tools;36.0.0"
+# ls ~/Android/build-tools/36.0.0/apksigner
+# which apksigner
+# apksigner --version
+
+
+# Config NVM directory
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# Config Yarn global packages
+# export PATH="$PATH:$(yarn global bin)"
+
 # bun completions
-[ -s "/Users/ravuthz/.bun/_bun" ] && source "/Users/ravuthz/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -142,10 +173,9 @@ export PATH="/opt/homebrew/bin/fzf:$PATH"
 # docker desktop path
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
-# export PGDATA='/opt/homebrew/opt/postgresql@13/bin/postgres'
-
 # Some custom scripts
-source ~/.ssh/scripts
+source ~/.ssh/scripts/deploy.sh
+source ~/.ssh/scripts/tailscale-vpn.sh
 
 dclear() {
   docker system prune -af &&docker builder prune -af && docker image prune -af && docker volume prune -f
@@ -156,7 +186,7 @@ dnone() {
 }
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/ravuthz/.docker/completions $fpath)
+fpath=($HOME/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
@@ -165,3 +195,16 @@ export PATH="/opt/homebrew/opt/icu4c@76/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c@76/sbin:$PATH"
 
 eval "$(starship init zsh)"
+eval "$(direnv hook bash)"
+
+export PATH="/opt/homebrew/opt/php@8.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.3/sbin:$PATH"
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/ravuthz/Projects/electron/photogram-server/resources/app_dir/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/ravuthz/Projects/electron/photogram-server/resources/app_dir/node_modules/tabtab/.completions/electron-forge.zsh
+# Added by Windsurf
+export PATH="/Users/ravuthz/.codeium/windsurf/bin:$PATH"
+
+alias python="python3"
+alias pip="pip3"
+
