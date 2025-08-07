@@ -26,6 +26,9 @@ backup:
 restore:
 	@chmod +x ./scripts/restore.sh && ./scripts/restore.sh
 
+log:
+	@git log
+
 # Push dotfiles backup to Git repository
 push:
 	@git add $(ROOT_DIR)
